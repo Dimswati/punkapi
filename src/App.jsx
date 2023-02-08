@@ -51,8 +51,8 @@ function App() {
 
   return (
     <div className="App">
-      <BeerList beers={beers}/>
-      {/* <Modal/> */}
+      {/* <BeerList beers={beers}/> */}
+      <Modal/>
     </div>
   );
 }
