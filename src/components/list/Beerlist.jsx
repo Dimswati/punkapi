@@ -5,11 +5,13 @@ import Popup from '../popup/Popup'
 
 export default function BeerList({beers}) {
   const [openModal, setOpenModal] = useState(false)
-  const [beer, setBeer] = useState({})
+  const [selectedBeer, setSelectedBeer] = useState({})
 
   function selectBeer(id){
-    setBeer(beers.filter(beer => beer.id === id))
+    const [selectBeer] = beers.filter(beer => beer.id === id)
     setOpenModal(prevState => !prevState)
+    setSelectedBeer(selectBeer)
+    // console.log(selectBeer)
   }
 
   function closeModal(){
@@ -29,7 +31,7 @@ export default function BeerList({beers}) {
           })
         }
       </div>
-      {openModal && <Popup beer={beer} closeModal={closeModal}/>}
+      {openModal && <Popup beer={selectedBeer} closeModal={closeModal}/>}
     </>
   )
 }

@@ -5,15 +5,15 @@ export default function Modal({beer}) {
   return (
     <>
         <div className='left'>
-          <h2 className='name'>BRAMLING X</h2>
-          <p className='description'>A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.</p>
+          <h2 className='name'>{beer.name}</h2>
+          <p className='description'>{beer.description}</p>
           <h2 className='title'>Brewers tips</h2>
-          <p className='description'>The earthy and floral aromas from the hops can be overpowering. Drop a little Cascade in at the end of the boil to lift the profile with a bit of citrus.</p>
+          <p className='description'>{beer.brewers_tips}</p>
           <h2 className='title'>Best served with</h2>
           <ol className='foodpair'>
-            <li>Spicy chicken tikka masala</li>
-            <li>Grilled chicken quesadilla</li>
-            <li>Caramel toffee cake</li>
+            {
+              beer.food_pairing.map(food => <li>{food}</li>)
+            }
           </ol>
         </div>
         <div className="right">

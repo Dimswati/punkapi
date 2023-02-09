@@ -4,6 +4,7 @@ import Modal from '../modal/Modal';
 import { Close } from '@mui/icons-material';
 
 export default function Popup({beer, closeModal}) {
+  // console.log(beer)
   return (
     <div className='modal-wrapper'>
       <div className="modal">
