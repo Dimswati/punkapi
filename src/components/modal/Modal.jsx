@@ -1,17 +1,16 @@
-import React from 'react'
-import {StarIcon, StarOutlineIcon} from '@mui/icons-material';
+import "./modal.scss";
+import {Star, StarOutline} from '@mui/icons-material';
 
-export default function Modal() {
+export default function Modal({beer}) {
   return (
-    <div className='modal'>
-      <div className="modal-wrapper">
+    <>
         <div className='left'>
           <h2 className='name'>BRAMLING X</h2>
           <p className='description'>A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.</p>
           <h2 className='title'>Brewers tips</h2>
           <p className='description'>The earthy and floral aromas from the hops can be overpowering. Drop a little Cascade in at the end of the boil to lift the profile with a bit of citrus.</p>
           <h2 className='title'>Best served with</h2>
-          <ol>
+          <ol className='foodpair'>
             <li>Spicy chicken tikka masala</li>
             <li>Grilled chicken quesadilla</li>
             <li>Caramel toffee cake</li>
@@ -55,14 +54,13 @@ export default function Modal() {
           </div>
           <h2 className="title">Customer rating</h2>
           <div className='stars'>
-            <StarIcon/>
-            <StarIcon/>
-            <StarIcon/>
-            <StarIcon/>
-            <StarOutlineIcon/>
+            <Star/>
+            <Star/>
+            <Star/>
+            <Star/>
+            <StarOutline/>
           </div>
         </div>
-      </div>
-    </div>
+    </>
   )
 }

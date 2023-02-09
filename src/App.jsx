@@ -1,11 +1,10 @@
 import BeerList from './components/list/Beerlist';
 import { useEffect, useState } from 'react';
 import './App.scss';
-import Modal from './components/modal/Modal'
 
 function App() {
 
-  const [beers, setBeers] = useState([])
+  const [beers, setBeers] = useState(()=>JSON.parse(localStorage.getItem("beers")) || [])
 
   //get beers data from punk api and call setBeers function with the array of beers 
   useEffect(()=>{
@@ -51,8 +50,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <BeerList beers={beers}/> */}
-      <Modal/>
+      <BeerList beers={beers}/>
     </div>
   );
 }

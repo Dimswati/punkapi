@@ -1,7 +1,7 @@
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import './beer.scss';
 
-export default function Beer({beer}) {
+export default function Beer({beer, openModal}) {
   const monthArr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
   
   const [number, year] = beer.first_brewed.split('/')
@@ -15,7 +15,7 @@ export default function Beer({beer}) {
             <p className='tagline'>{beer.tagline}</p>
             <p className='description'>{beer.description}</p>
             <div className='buttons'>
-                <button className='more-info'>more info <ArrowRightAltIcon/></button>
+                <button className='more-info' onClick={openModal}>more info <ArrowRightAltIcon/></button>
                 <button className='edit'>edit</button>
             </div>
             <hr />

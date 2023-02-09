@@ -1,0 +1,39 @@
+@import '../../global.scss';
+
+.modal-wrapper{
+    background-color: rgba(132, 128, 175, 0.514);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modal{
+        background-color: #FFFFFF;
+        padding: 1.2rem;
+        border-radius: 24px;
+        box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.1);
+        z-index: 100;
+        width: 65%;
+        display: flex;
+        position: relative;
+
+        .close{   
+            position: absolute;
+            top: -24px;
+            right: -24px;
+            background-color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 50%;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+}
